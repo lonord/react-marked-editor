@@ -1,0 +1,33 @@
+{
+  "name": "react-marked-editor",
+  "version": "0.0.1",
+  "description": "A markdown editor written by React",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "react",
+    "markdown",
+    "codemirror",
+    "editor"
+  ],
+  "dependencies": {
+    "codemirror": "5.25.0",
+    "highlight.js": "9.10.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "marked": "^0.3.6",
+    "prop-types": "^15.5.6"
+  },
+  "peerDependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lonord/react-marked-editor.git"
+  },
+  "author": "Loy B. <lonord@qq.com>",
+  "license": "MIT"
+}
