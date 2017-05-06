@@ -11,26 +11,38 @@ $ npm install react-marked-editor
 
 ### Usage
 
+Firstly, add `styled-jsx/babel` to `plugins` in your babel configuration:
+
+```json
+{
+  "plugins": [
+    "styled-jsx/babel"
+  ]
+}
+```
+
+Next, use the component in your code:
+
 ```js
 import ReactMarkedEditor from 'react-marked-editor';
 //...
 render() {
-	return (
-		<div>
-			<ReactMarkedEditor initialMarkdown={md}/>
-		</div>
-	);
+  return (
+    <div>
+      <ReactMarkedEditor initialMarkdown={md}/>
+    </div>
+  );
 }
 
 // show readonly markdown view
 import { ReactMarkedView } from 'react-marked-editor';
 //...
 render() {
-	return (
-		<div>
-			<ReactMarkedView markdown={md}/>
-		</div>
-	);
+  return (
+    <div>
+      <ReactMarkedView markdown={md}/>
+    </div>
+  );
 }
 ```
 
@@ -59,7 +71,23 @@ render() {
 
 ### Demo
 
-See [react-marked-editor-demo](https://github.com/lonord/react-marked-editor-demo)
+Clone the repo
+
+```bash
+$ git clone https://github.com/lonord/react-marked-editor.git
+```
+
+Install dependencies
+
+```bash
+$ npm i
+```
+
+And run
+
+```bash
+$ npm start
+```
 
 ## License
 
