@@ -4,7 +4,7 @@
   "description": "A markdown editor written by React",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "start": "webpack-dev-server --config demo/webpack.config.js"
   },
   "keywords": [
     "react",
@@ -16,9 +16,12 @@
     "codemirror": "5.25.0",
     "highlight.js": "9.10.0",
     "lodash.debounce": "^4.0.8",
+    "lodash.endswith": "^4.2.1",
+    "lodash.startswith": "^4.2.1",
     "lodash.throttle": "^4.1.1",
     "marked": "^0.3.6",
-    "prop-types": "^15.5.6"
+    "prop-types": "^15.5.6",
+    "styled-jsx": "^0.5.7"
   },
   "peerDependencies": {
     "react": "^15.4.0",
@@ -29,5 +32,18 @@
     "url": "https://github.com/lonord/react-marked-editor.git"
   },
   "author": "Loy B. <lonord@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jsx-loader": "^0.13.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5"
+  }
 }
