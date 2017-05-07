@@ -25,11 +25,21 @@ module.exports = {
         // 和上文 output 的“publicPath”值保持一致
     },
     module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            use: [ 'babel-loader', ],
-            exclude: /node_modules/
-        }]
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                use: ['babel-loader'],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.less$/,
+                loader: 'style-loader!css-loader!less-loader'
+            },
+            {
+                test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
+                loader: 'file-loader?name=[name].[ext]'
+            }
+        ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
