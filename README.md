@@ -3,6 +3,8 @@ A markdown editor written by React
 
 The editor is powered by [CodeMirror](http://codemirror.net), and the markdown transcoder is powered by [marked](https://github.com/chjj/marked)
 
+**(: The first major version 1.0.0 is released!**
+
 ## Installation
 
 ```shell
