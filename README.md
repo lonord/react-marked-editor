@@ -21,7 +21,26 @@ Firstly, add `styled-jsx/babel` to `plugins` in your babel configuration:
 }
 ```
 
-Next, use the component in your code:
+Next, add font-awesome less/css files and font files to your project, and add some loaders to your webpack configuration:
+
+```js
+{
+    test: /\.less$/,
+    loader: 'style-loader!css-loader!less-loader'
+},
+{
+    test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
+    loader: 'file-loader?name=[name].[ext]'
+}
+```
+
+Add font-awesome less/css file import to your entry code:
+
+```js
+import './path/to/font-awesome.(less|css)';
+```
+
+Finally, use the component in your code:
 
 ```js
 import ReactMarkedEditor from 'react-marked-editor';
@@ -56,6 +75,8 @@ render() {
 | onChange               | function | editor content change event, args -> (newValue)                    |
 | markdownClassName      |  string  | `className` pass to `ReactMarkedView` inside `ReactMarkedEditor`   |
 | markdownStyle          |  object  | styles object pass to `ReactMarkedView` inside `ReactMarkedEditor` |
+| editorHeight           |  number  | height of editor (exclude toolbar)                                 |
+| hideToolbar            |  boolean | do not show the toolbar                                            |
 | style                  |  object  | set styles to root element of `ReactMarkedEditor`                  |
 | className              |  string  | set `className` to root element of `ReactMarkedEditor`             |
 

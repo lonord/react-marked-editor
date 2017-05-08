@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import throttle from 'lodash.throttle';
 import ReactMarkedEditor from '../../';
 
 export default class App extends Component {
 	constructor(props) {
 		super(props);
 		this.handleMarkdownChange = this.handleMarkdownChange.bind(this);
+		this.handleWindowResize = throttle(this.handleWindowResize.bind(this), 200);
+		this.state = {
+			winWidth: 1024,
+			winHeight: 768
+		}
 		this.markdown = md;
 	}
 	
@@ -13,26 +19,47 @@ export default class App extends Component {
 		this.markdown = newValue;
 	}
 
+	componentDidMount() {
+		this.setState({
+			winWidth: window.innerWidth,
+			winHeight: window.innerHeight
+		});
+		window.addEventListener('resize', this.handleWindowResize);
+	}
+
+	componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowResize);
+	}
+	
+	handleWindowResize() {
+        this.setState({
+            winWidth: window.innerWidth,
+			winHeight: window.innerHeight
+        });
+    }
+		
 	render() {
+		const styles = {
+			wrapper: {
+				width: this.state.winWidth - 100,
+				border: '1px solid #eee'
+			}
+		}
 		return (
 			<div className="wrapper">
-				<ReactMarkedEditor style={{height: '100%', width: '100%', border: '1px solid #eee'}} initialMarkdown={md} onChange={this.handleMarkdownChange} />
+				<ReactMarkedEditor style={styles.wrapper}
+					editorHeight={this.state.winHeight - 140}	
+					initialMarkdown={md}
+					onChange={this.handleMarkdownChange} />
 				<style jsx>{`
 					.wrapper {
-						height: 100%;
-						width: 100%;
-						box-sizing: border-box;
-						padding: 50px;
+						margin: 50px 50px 0px 50px;
 					}
 				`}</style>
 				<style jsx global>{`
 				* {
 					margin: 0px;
 					padding: 0px;
-				}
-				html, body, #root {
-					height: 100%;
-					width: 100%;
 				}
 				`}</style>
 			</div>
