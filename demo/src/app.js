@@ -16,7 +16,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className="wrapper">
-				<ReactMarkedEditor style={{height: '100%', width: '100%', border: '1px solid #777'}} initialMarkdown={md} onChange={this.handleMarkdownChange} />
+				<ReactMarkedEditor style={{height: '100%', width: '100%', border: '1px solid #eee'}} initialMarkdown={md} onChange={this.handleMarkdownChange} />
 				<style jsx>{`
 					.wrapper {
 						height: 100%;
