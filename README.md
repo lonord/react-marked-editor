@@ -5,6 +5,14 @@ The editor is powered by [CodeMirror](http://codemirror.net), and the markdown t
 
 **(: The first major version 1.0.0 is released!**
 
+## ChangeLog
+
+#### Version 1.1.0
+- add custom button support
+
+#### Version 1.0.0
+- the first major version released
+
 ## Installation
 
 ```shell
@@ -81,6 +89,10 @@ render() {
 | hideToolbar            |  boolean | do not show the toolbar                                            |
 | style                  |  object  | set styles to root element of `ReactMarkedEditor`                  |
 | className              |  string  | set `className` to root element of `ReactMarkedEditor`             |
+| toolbarCustomButtons   |  array   | custom buttons add to toolbar, properties of child listed below ⬇︎ |
+| ↳ title                |  string  | the `title` property of button element                             |
+| ↳ icon                 |  string  | the class name of Font Awesome icon                                |
+| ↳ onClick              | function | click callback, args -> (codeMirror, event)                        |
 
 **ReactMarkedView**
 

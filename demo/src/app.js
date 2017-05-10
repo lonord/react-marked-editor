@@ -37,6 +37,14 @@ export default class App extends Component {
 			winHeight: window.innerHeight
         });
     }
+
+	/**
+	 * @param codeMirror -> the codemirror doc instance
+	 * @param clickEvent -> the click event
+	 */
+	handleImageUploadClick(codeMirror, clickEvent) {
+		alert('You clicked the custom button!');
+	}
 		
 	render() {
 		const styles = {
@@ -45,11 +53,20 @@ export default class App extends Component {
 				border: '1px solid #eee'
 			}
 		}
+		//custom buttons defined here
+		const btns = [
+			{
+				title: 'custom button',
+				icon: 'fa-upload',
+				onClick: this.handleImageUploadClick.bind(this)
+			}
+		]
 		return (
 			<div className="wrapper">
 				<ReactMarkedEditor style={styles.wrapper}
 					editorHeight={this.state.winHeight - 140}	
 					initialMarkdown={md}
+					toolbarCustomButtons={btns}
 					onChange={this.handleMarkdownChange} />
 				<style jsx>{`
 					.wrapper {
