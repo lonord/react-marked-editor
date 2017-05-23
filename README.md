@@ -9,6 +9,9 @@ The editor is powered by [CodeMirror](http://codemirror.net), and the markdown t
 
 ## ChangeLog
 
+#### Version 1.1.1
+- improvement of compatibility
+
 #### Version 1.1.0
 - add custom button support
 
