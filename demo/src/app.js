@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import throttle from 'lodash.throttle';
-import ReactMarkedEditor from '../../';
+import ReactMarkedEditor from '../../lib/';
 
 export default class App extends Component {
 	constructor(props) {

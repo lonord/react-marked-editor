@@ -5,19 +5,6 @@ A markdown editor written by React
 
 The editor is powered by [CodeMirror](http://codemirror.net), and the markdown transcoder is powered by [marked](https://github.com/chjj/marked)
 
-**(: The first major version 1.0.0 is released!**
-
-## ChangeLog
-
-#### Version 1.1.1
-- improvement of compatibility
-
-#### Version 1.1.0
-- add custom button support
-
-#### Version 1.0.0
-- the first major version released
-
 ## Installation
 
 ```shell
