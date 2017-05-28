@@ -65,7 +65,8 @@ var ReactMarkedView = function (_Component) {
                     var str = lang ? _highlight3.default.highlight(lang, code).value : _highlight3.default.highlightAuto(code).value;
                     return str;
                 },
-                renderer: renderer
+                renderer: renderer,
+                silent: true
             }, markedOptions));
             var html = (0, _marked2.default)(markdown);
             markdownClass = markdownClass ? markdownClass : 'markdown-body';
