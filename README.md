@@ -1,7 +1,7 @@
 # react-marked-editor
 A markdown editor written by React
 
-[![version](https://img.shields.io/npm/v/react-marked-editor.svg?style=flat)](https://www.npmjs.com/package/react-marked-editor) [![version](https://img.shields.io/npm/dw/react-marked-editor.svg?style=flat)](https://www.npmjs.com/package/react-marked-editor)
+[![version](https://img.shields.io/npm/v/react-marked-editor.svg?style=flat)](https://www.npmjs.com/package/react-marked-editor)
 
 The editor is powered by [CodeMirror](http://codemirror.net), and the markdown transcoder is powered by [marked](https://github.com/chjj/marked)
 
