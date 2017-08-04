@@ -1,11 +1,11 @@
 {
   "name": "react-marked-editor",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "A markdown editor written by React",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --config demo/webpack.config.js",
-    "build": "rimraf dist && babel --no-babelrc lib --out-dir dist --extensions .js --copy-files --presets=es2015,react --plugins=styled-jsx/babel",
+    "build": "rimraf dist && babel --no-babelrc src --out-dir lib --extensions .js --copy-files --presets=es2015,react --plugins=styled-jsx/babel",
     "prepublish": "npm run build"
   },
   "keywords": [
@@ -15,6 +15,7 @@
     "editor"
   ],
   "dependencies": {
+    "@types/react": "^16.0.0",
     "codemirror": "5.25.0",
     "highlight.js": "9.10.0",
     "lodash.debounce": "^4.0.8",

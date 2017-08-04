@@ -7,7 +7,7 @@ The editor is powered by [CodeMirror](http://codemirror.net), and the markdown t
 
 ## Installation
 
-```shell
+```bash
 $ npm install react-marked-editor
 ```
 
@@ -55,7 +55,7 @@ render() {
   );
 }
 
-// show readonly markdown view
+//show readonly markdown view
 import { ReactMarkedView } from 'react-marked-editor';
 //...
 render() {
@@ -66,7 +66,7 @@ render() {
   );
 }
 
-// get codeMirror instance
+//get codeMirror instance
 <ReactMarkedEditor ref={editor = this.editor = editor} {...otherProps}/>
 //in somewhere
 const codeMirror = this.editor.codeDoc;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import throttle from 'lodash.throttle';
-import ReactMarkedEditor from '../../lib/';
+import ReactMarkedEditor from '../../src/';
 
 export default class App extends Component {
 	constructor(props) {
@@ -57,7 +57,7 @@ export default class App extends Component {
 		const btns = [
 			{
 				title: 'custom button',
-				icon: 'fa-upload',
+				icon: 'upload',
 				onClick: this.handleImageUploadClick.bind(this)
 			}
 		]
