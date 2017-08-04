@@ -65,6 +65,11 @@ render() {
     </div>
   );
 }
+
+// get codeMirror instance
+<ReactMarkedEditor ref={editor = this.editor = editor} {...otherProps}/>
+//in somewhere
+const codeMirror = this.editor.codeDoc;
 ```
 
 ### API Doc
