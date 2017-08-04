@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface ReactMarkedEditorProps {
 	initialMarkdown?: string
 	onChange?(editorContent: string)
@@ -26,5 +28,5 @@ export interface ReactMarkedViewProps {
 	className?: string
 }
 
-export default class ReactMarkedView extends React.Component<ReactMarkedViewProps, any> {
+export class ReactMarkedView extends React.Component<ReactMarkedViewProps, any> {
 }
