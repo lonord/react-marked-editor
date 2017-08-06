@@ -332,7 +332,7 @@ class ReactMarkedEditor extends Component {
 				overflow: scroll !important; /* Things will break if this is overridden */
 				/* 30px is the magic margin used to hide the element's real scrollbars */
 				/* See overflow: hidden in .CodeMirror */
-				margin-bottom: -30px; margin-right: -30px;
+				margin-bottom: -30px; margin-right: -20px;
 				padding-bottom: 30px;
 				height: 100%;
 				outline: none; /* Prevent dragging from highlighting the element */
@@ -341,6 +341,7 @@ class ReactMarkedEditor extends Component {
 				.CodeMirror-sizer {
 				position: relative;
 				border-right: 30px solid transparent;
+
 				}
 
 				/* The fake, visible scrollbars. Used to force redraw during scrolling
