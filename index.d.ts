@@ -1,6 +1,8 @@
 /// <reference types="react" />
 import React from 'react'
 
+declare class CodeMirrorDoc extends CodeMirror.Doc implements CodeMirror.EditorFromTextArea {}
+
 export interface ReactMarkedEditorProps {
 	initialMarkdown?: string
 	onChange?(editorContent: string)
@@ -12,13 +14,15 @@ export interface ReactMarkedEditorProps {
 		title?: string
 		text?: string
 		icon?: string
-		onClick?(codeMirror: any, event: any)
+		onClick?(codeMirror: CodeMirrorDoc, event: any)
 	}>
 	style?: any
 	className?: string
 }
 
 export default class ReactMarkedEditor extends React.Component<ReactMarkedEditorProps, any> {
+	codeDoc: CodeMirrorDoc
+	replacer: Replacer
 }
 
 export interface ReactMarkedViewProps {
@@ -33,7 +37,7 @@ export class ReactMarkedView extends React.Component<ReactMarkedViewProps, any> 
 }
 
 export class Replacer {
-	constructor(codeMirror: any)
+	constructor(codeMirror: CodeMirrorDoc)
 	bold(): void
 	remove(): void
 	italic(): void
