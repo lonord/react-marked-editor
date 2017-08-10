@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import throttle from 'lodash.throttle';
-import ReactMarkedEditor from '../../src/';
+import ReactMarkedEditor, { Replacer } from '../../src/';
 
 export default class App extends Component {
 	constructor(props) {
@@ -43,7 +43,9 @@ export default class App extends Component {
 	 * @param clickEvent -> the click event
 	 */
 	handleImageUploadClick(codeMirror, clickEvent) {
-		alert('You clicked the custom button!');
+		alert('You clicked the custom button! And an image will be added to editor.');
+		const replacer = new Replacer(codeMirror)
+		replacer.image('http://codemirror.net/doc/logo.png')
 	}
 		
 	render() {

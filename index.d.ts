@@ -31,3 +31,21 @@ export interface ReactMarkedViewProps {
 
 export class ReactMarkedView extends React.Component<ReactMarkedViewProps, any> {
 }
+
+export class Replacer {
+	constructor(codeMirror: any)
+	bold(): void
+	remove(): void
+	italic(): void
+	codeInline(): void
+	header(n?: number): void
+	quote(): void
+	ul(): void
+	ol(): void
+	separate(): void
+	link(url?: string): void
+	image(url?: string): void
+	code(): void
+	table(): void
+	destory(): void
+}

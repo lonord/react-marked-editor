@@ -179,7 +179,7 @@ export default class Replacer {
 		this.editor.focus();
 	}
 
-	link() {
+	link(url) {
 		let sels = this.editor.listSelections().map(selObj => {
 			let fromPos = selObj.anchor;
 			let toPos = selObj.head;
@@ -188,10 +188,13 @@ export default class Replacer {
 				toPos = selObj.anchor;
 			}
 			let content = this.editor.getRange(fromPos, toPos, ' ');
-			this.editor.replaceRange(`[${content}]()`, fromPos, toPos);
+			if (!url) {
+				url = ''
+			}
+			this.editor.replaceRange(`[${content}](${url})`, fromPos, toPos);
 			let resultPos = {
 				line: fromPos.line,
-				ch: fromPos.ch + content.length + 3
+				ch: fromPos.ch + content.length + url.length + 3
 			};
 			return {
 				anchor: resultPos,
@@ -202,7 +205,7 @@ export default class Replacer {
 		this.editor.focus();
 	}
 
-	image() {
+	image(url) {
 		let sels = this.editor.listSelections().map(selObj => {
 			let fromPos = selObj.anchor;
 			let toPos = selObj.head;
@@ -211,10 +214,13 @@ export default class Replacer {
 				toPos = selObj.anchor;
 			}
 			let content = this.editor.getRange(fromPos, toPos, ' ');
-			this.editor.replaceRange(`![${content}]()`, fromPos, toPos);
+			if (!url) {
+				url = ''
+			}
+			this.editor.replaceRange(`![${content}](${url})`, fromPos, toPos);
 			let resultPos = {
 				line: fromPos.line,
-				ch: fromPos.ch + content.length + 4
+				ch: fromPos.ch + content.length + url.length + 4
 			};
 			return {
 				anchor: resultPos,
