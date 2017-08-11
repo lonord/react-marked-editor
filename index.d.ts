@@ -1,7 +1,8 @@
 /// <reference types="react" />
 import React from 'react'
+import CodeMirror from 'codemirror'
 
-declare class CodeMirrorDoc extends CodeMirror.Doc implements CodeMirror.EditorFromTextArea {}
+declare type CodeMirrorDoc = CodeMirror.Doc & CodeMirror.EditorFromTextArea
 
 export interface ReactMarkedEditorProps {
 	initialMarkdown?: string
