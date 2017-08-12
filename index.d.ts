@@ -19,6 +19,7 @@ export interface ReactMarkedEditorProps {
 	}>
 	style?: any
 	className?: string
+	openLinkInBlank?: boolean
 }
 
 export default class ReactMarkedEditor extends React.Component<ReactMarkedEditorProps, any> {
@@ -32,6 +33,7 @@ export interface ReactMarkedViewProps {
 	markedOptions: any
 	style?: any
 	className?: string
+	openLinkInBlank?: boolean
 }
 
 export class ReactMarkedView extends React.Component<ReactMarkedViewProps, any> {
