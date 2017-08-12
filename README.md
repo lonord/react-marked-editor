@@ -87,6 +87,7 @@ const codeMirror = this.editor.codeDoc;
 | style                  |  object  | set styles to root element of `ReactMarkedEditor`                  |
 | className              |  string  | set `className` to root element of `ReactMarkedEditor`             |
 | openLinkInBlank        |  boolean | whether open link in blank window/tab pass to `ReactMarkedView`    |
+| markedOptions          |  object  | options pass to `marked`                                           |
 | toolbarCustomButtons   |  array   | custom buttons add to toolbar, properties of child listed below ⬇︎ |
 | ↳ title                |  string  | the `title` property of button element                             |
 | ↳ icon                 |  string  | the class name of Font Awesome icon                                |

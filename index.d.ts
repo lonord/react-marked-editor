@@ -31,7 +31,7 @@ export default class ReactMarkedEditor extends React.Component<ReactMarkedEditor
 export interface ReactMarkedViewProps {
 	markdown?: string
 	markdownClass?: string
-	markedOptions: any
+	markedOptions?: any
 	style?: any
 	className?: string
 	openLinkInBlank?: boolean
