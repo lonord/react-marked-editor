@@ -84,7 +84,13 @@ class ReactMarkedEditor extends Component {
 	}
 
 	render() {
-		let { markdownClassName, markdownStyle, editorHeight, hideToolbar, toolbarCustomButtons } = this.props;
+		let {
+			markdownClassName,
+			markdownStyle,
+			editorHeight,
+			hideToolbar,
+			toolbarCustomButtons,
+			openLinkInBlank } = this.props;
 		const styles = {
 			wrapper: {
 				height: editorHeight
@@ -123,6 +129,7 @@ class ReactMarkedEditor extends Component {
 							<ReactMarkedView
 								markdown={this.state.markdown}
 								style={markdownStyle}
+								openLinkInBlank={openLinkInBlank}
 								markdownClass={markdownClassName} />
 						</div>
 					</div>
@@ -551,12 +558,14 @@ ReactMarkedEditor.propTypes = {
 	markdownStyle: propTypes.object,
 	editorHeight: propTypes.any,
 	hideToolbar: propTypes.bool,
-	toolbarCustomButtons: propTypes.array
+	toolbarCustomButtons: propTypes.array,
+	openLinkInBlank: propTypes.bool
 };
 ReactMarkedEditor.defaultProps = {
 	editorHeight: 100,
 	hideToolbar: false,
-	toolbarCustomButtons: []
+	toolbarCustomButtons: [],
+	openLinkInBlank: false
 }
 
 export default ReactMarkedEditor;

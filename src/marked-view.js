@@ -10,10 +10,13 @@ class ReactMarkedView extends Component {
     }
 
     render() {
-        let { markdown, markedOptions, className, markdownClass, style } = this.props;
+        let { markdown, markedOptions, className, markdownClass, style, openLinkInBlank } = this.props;
         let renderer = new marked.Renderer();
         renderer.em = specialRenderer.em;
         renderer.image = specialRenderer.image;
+        if (openLinkInBlank) {
+            renderer.link = specialRenderer.link;
+        }
         markedOptions && marked.setOptions(Object.assign({
             highlight: (code, lang) => {
                 let str = lang ? highlight.highlight(lang, code).value : highlight.highlightAuto(code).value;
@@ -759,12 +762,14 @@ class ReactMarkedView extends Component {
 ReactMarkedView.propTypes = {
     markdown: propTypes.string,
     markdownClass: propTypes.string,
-    markedOptions: propTypes.object
+    markedOptions: propTypes.object,
+    openLinkInBlank: propTypes.bool
 };
 ReactMarkedView.defaultProps = {
     markdown: '',
     markdownClass: undefined,
-    markedOptions: {}
+    markedOptions: {},
+    openLinkInBlank: false
 };
 
 function combineClassName() {

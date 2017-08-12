@@ -60,4 +60,13 @@ export default class SpecialRenderer {
 		}
 		return SpecialRenderer.originImageRenderer(href, title, text);
 	}
+
+	static link(href, title, text) {
+		var out = '<a href="' + href + '" target="_blank"';
+		if (title) {
+			out += ' title="' + title + '"';
+		}
+		out += '>' + text + '</a>';
+		return out;
+	}
 }

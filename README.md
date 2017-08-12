@@ -86,6 +86,7 @@ const codeMirror = this.editor.codeDoc;
 | hideToolbar            |  boolean | do not show the toolbar                                            |
 | style                  |  object  | set styles to root element of `ReactMarkedEditor`                  |
 | className              |  string  | set `className` to root element of `ReactMarkedEditor`             |
+| openLinkInBlank        |  boolean | whether open link in blank window/tab pass to `ReactMarkedView`    |
 | toolbarCustomButtons   |  array   | custom buttons add to toolbar, properties of child listed below ⬇︎ |
 | ↳ title                |  string  | the `title` property of button element                             |
 | ↳ icon                 |  string  | the class name of Font Awesome icon                                |
@@ -100,6 +101,7 @@ const codeMirror = this.editor.codeDoc;
 | markedOptions          |  object  | options pass to `marked`                                           |
 | style                  |  object  | set styles to root element of `ReactMarkedView`                    |
 | className              |  string  | set `className` to root element of `ReactMarkedView`               |
+| openLinkInBlank        |  boolean | whether open link in blank window/tab                              |
 
 ### Demo
 

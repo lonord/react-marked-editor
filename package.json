@@ -1,6 +1,6 @@
 {
   "name": "react-marked-editor",
-  "version": "1.4.2",
+  "version": "1.5.1",
   "description": "A markdown editor written by React",
   "main": "lib/index.js",
   "scripts": {
