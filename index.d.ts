@@ -19,6 +19,7 @@ export interface ReactMarkedEditorProps {
 	}>
 	style?: any
 	className?: string
+	markedOptions?: any
 	openLinkInBlank?: boolean
 }
 
